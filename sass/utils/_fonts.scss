@@ -1,0 +1,12 @@
+    @mixin fonts ($fw, $fs, $lh, $ls) {
+
+    font-weight: $fw;
+    font-size: $fs+px;
+    line-height: $lh;
+    letter-spacing: $ls+em;
+    }
+    
+body {
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: var(--title-color);
+    }
