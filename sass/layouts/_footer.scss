@@ -1,6 +1,12 @@
 .footer {
-    height: 252px;
-    margin: 0 auto;
+    height: 604px;
+        @media screen and (min-width: 768px) {
+        height: 464px;
+        }
+        @media screen and (min-width: 1200px) {
+        height: 251px;
+        }
+
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -8,21 +14,41 @@
 }
 
 .footer__container {
+    @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline
+    }
+    @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    }
 }
 
 .footer__contact {
-    margin-right: 93px;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+        margin: 0 93px 0 0;
+    }
+
 }
 
 .footer__item {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 }
 
 .footer__contact-list {
-    @include fonts (null, 14, 1.71, 0.03);
+    @include fonts (null, 14, 1.14, 0.03);
+    
+    @media screen and (min-width: 1200px) {
+    text-align: left;
+    }
+
+
 
     color: rgba(255, 255, 255, 0.6);
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .footer__address-link {
@@ -37,19 +63,29 @@
 
 .join {
     width: 206px;
-    padding-top: 12px;
-    margin-right: 93px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+    margin: 0 94px 0 0;
+    }
 }
+
 
 .join__title,
 .subscription__title {
     margin-bottom: 20px;
 
-    @include fonts (700, 14, 1.14, 0.03);
-
     text-transform: uppercase;
+    text-align: center;
 
     color: var(--additional-color);
+    
+    @include fonts (700, 14, 1.17, 0.03);
+
+    @media screen and (min-width: 1200px) {
+    text-align: left;
+    }
 }
 
 .join__list {
@@ -98,25 +134,48 @@
 }
 
 .subscription {
-    padding-top: 12px;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+    margin: 0;
+    }
 }
 
 .subscription__form {
     display: flex;
-    width: 570px;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        gap: 12px;
+        width: 570px;
+    }
 }
 
+.subscription-email {
+    width: calc(100vw - 30px);
+    @media screen and (min-width: 480px) {
+    width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+    width: 358px;
+    }
+}
 .subscription__input {
     height: 50px;
-    width: 358px;
+    width: inherit;
     padding-left: 16px;
 
     background-color: transparent;
     color: rgba(255, 255, 255, 0.6);
     border-radius: 4px;
+    box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    }
 }
 
 .subscription__btn {
@@ -138,6 +197,8 @@
 
     color: var(--additional-color);
     background-color: var(--link-color);
+
+    margin: 0 auto;
 
     &::after {
         content: "";

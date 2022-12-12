@@ -14,7 +14,7 @@
 	
 </head>
 <body>
-	<!-- <header class="header">
+	<header class="header">
 		<div class="header__container container">
 			<nav class="header__navigation">
 				<a class="header__logo link" href="./index.html"> <span class="header__logo-span logo-span">Web</span>Studio</a>
@@ -49,7 +49,15 @@
 				</li>
 			</ul>
 		</div>
-	</header> -->
+			<svg class="icon-menu_24px" width="24" height="16">
+				<use href="./images/symbol-defs.svg#icon-menu_24px">
+				</use>
+			</svg>
+			<svg class="icon-close_24px" width="24" height="16">
+				<use href="./images/symbol-defs.svg#icon-close_24px">
+				</use>
+			</svg>
+	</header>
 	<main>
 		<section class="hero">
 			<div class="hero__container container">
@@ -351,7 +359,7 @@
 		</section>
 	</main>
 	<footer class="footer">
-		<!-- <div class="footer__container container">
+		<div class="footer__container container">
 			<div class="footer__contact">
 				<a class="footer__logo link" href="/"><span class="footer__logo-span">Web</span>Studio</a>
 				<address>
@@ -403,7 +411,7 @@
 				<p class="subscription__title">Підпишіться на розсилку</p>
 				<form class="subscription__form" name="subscription-form" autocomplete="on">
 					<label for="subscription-email">
-						<input class="subscription__input" type="email" name="email" placeholder="E-mail" id="subscription-email"/>
+						<div class="subscription-email"><input class="subscription__input" type="email" name="email" placeholder="E-mail" id="subscription-email"/></div >
 					</label>
 					<button class="subscription__btn" type="submit">Підписатися
 						<svg class="icon-send" width="24" height="24">
@@ -413,7 +421,7 @@
 					</button>
 				</form>
 			</div>
-		</div> -->
+		</div>
 	</footer>
 	<div class="backdrop is-hidden" data-modal>
 		<div class="modal">
@@ -462,7 +470,7 @@
 							<use href="./images/symbol-defs.svg#icon-check"></use>
 						</svg>
 					</span>
-					Погоджуюся з розсилкою та приймаю<a class="agreement link" href="">Умови договору</a>
+					<dv class="policy-section">Погоджуюся з розсилкою та приймаю<a class="agreement link" href="">Умови договору</a></dv >
 				</label>
 			</div>
 			<button class="callback-btn" type="submit">Відправити

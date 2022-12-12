@@ -1,13 +1,26 @@
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0px;
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0px;
+    }
 }
 
 .portfolio__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
+    padding: 0px 15px;
+    min-height: 91px;
+    align-content: space-between;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
     justify-content: center;
+    margin-bottom: 30px;
+    min-height: auto;
+    }
+    @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
+    }
 }
 
 .portfolio__btn {
@@ -17,10 +30,7 @@
     justify-content: center;
 
     margin: 0 auto;
-    padding-top: 6px;
-    padding-right: 22px;
-    padding-bottom: 6px;
-    padding-left: 22px;
+    padding: 6px 22px;
 
     font-family: "Roboto";
 
@@ -43,14 +53,28 @@
 }
 
 .portfolio__images {
+    padding: 0px 15px;
+    max-width: 450px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    max-width: 100%;
+    }
+
 }
 
 .portfolio__addlist {
     position: relative;
-    width: 370px;
+    width: 100%;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        max-width: calc((100% - 30px)/2);
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: calc((100% - 60px)/3);
+    }
 
     background: var(--additional-color);
 
@@ -59,6 +83,10 @@
     &:hover {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+}
+.portfolio__link img {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .portfolio__overlay {
@@ -90,7 +118,8 @@
 
 .portfolio__border {
     display: inline-block;
-    width: 370px;
+    width: 100%;
+    // width: 370px;
     padding-top: 20px;
     padding-right: 24px;
     padding-bottom: 20px;
