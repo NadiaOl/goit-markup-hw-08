@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .hide {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -56,6 +57,7 @@ button {
   --text-color: #757575;
   --link-color: #2196f3;
   --additional-color: #ffffff;
+  --gra: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 body {
@@ -568,11 +570,11 @@ textarea::placeholder {
   display: inline-flex;
   align-items: center;
   flex-direction: row-reverse;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: var(--text-color);
 }
 @media screen and (min-width: 1200px) {
   .header__link-email,
@@ -585,7 +587,7 @@ textarea::placeholder {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__link-email {
     margin-bottom: 10px;
   }
@@ -595,7 +597,7 @@ textarea::placeholder {
   fill: currentColor;
   margin-right: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .icon-envelope {
     width: 14px;
     height: 10px;
@@ -606,7 +608,7 @@ textarea::placeholder {
   fill: currentColor;
   margin-right: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .icon-smartphone {
     width: 10px;
     height: 14px;
@@ -638,28 +640,43 @@ textarea::placeholder {
 }
 
 .hero {
-  margin: 0 auto;
   display: flex;
   align-items: center;
+  margin: 0 auto;
   height: 400px;
   max-width: 480px;
   background-color: #C4C4C4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tel.jpg);
+  background-image: var(--gra), url(../../images/hero-tel.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gra), url(../../images/hero-tel-2х.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     height: 459px;
     max-width: 768px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tab.jpg);
+    background-image: var(--gra), url(../../images/hero-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gra), url(../../images/hero-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
     max-width: 1600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.jpg);
+    background-image: var(--gra), url(../../images/hero.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gra), url(../../images/hero-2x.jpg);
   }
 }
 
@@ -1181,10 +1198,7 @@ textarea::placeholder {
 .portfolio__border {
   display: inline-block;
   width: 100%;
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding: 20px 24px;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
@@ -1205,8 +1219,7 @@ textarea::placeholder {
 
 .footer {
   height: 604px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0px;
   background-color: #2f303a;
 }
 @media screen and (min-width: 768px) {
@@ -1247,13 +1260,13 @@ textarea::placeholder {
 }
 
 .footer__contact-list {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   display: block;
   text-align: center;
   margin-bottom: 60px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
 }
 @media screen and (min-width: 1200px) {
   .footer__contact-list {
@@ -1278,7 +1291,7 @@ textarea::placeholder {
 }
 @media screen and (min-width: 1200px) {
   .join {
-    margin: 0 94px 0 0;
+    margin: 0px 94px 0px 0px;
   }
 }
 

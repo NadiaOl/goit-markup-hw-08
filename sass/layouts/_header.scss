@@ -9,17 +9,19 @@
 .header__container {
     padding: 15px;
     margin: 0;
-        @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    padding: 21px 15px;
-    margin: 0 auto;
-        }
-    @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0 auto;
+    
+    @include tablet {
+        display: flex;
+        align-items: center;
+        padding: 21px 15px;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
     }
 }
 
@@ -29,18 +31,19 @@
 
 .header__list {
     display: none;
-    @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-left: 88px;
-    margin-right: 96px;
-    }
-    @media screen and (min-width: 1200px) {
-    margin-left: 93px;
-    margin-right: 305px;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-left: 88px;
+        margin-right: 96px;
     }
 
+    @include desktop {
+        margin-left: 93px;
+        margin-right: 305px;
+    }
 }
 
 .header__link {
@@ -68,13 +71,15 @@
 
 .header__contact-list {
     display: none;
-    @media screen and (min-width: 768px) {
-    display: inline;
+
+    @include tablet {
+        display: inline;
     }
-    @media screen and (min-width: 1200px) {
-    display: flex;
-    gap: 40px;
-    margin-left: auto;
+
+    @include desktop{
+        display: flex;
+        gap: 40px;
+        margin-left: auto;
     }
 }
 
@@ -83,27 +88,27 @@
     display: inline-flex;
     align-items: center;
     flex-direction: row-reverse;
-    @media screen and (min-width: 1200px) {
+    
+    color: var(--text-color);
+    
+    @include fonts (500, 12, 1.17, 0.02);
+
+    @include desktop {
         padding: 32px 0px;
         @include fonts (500, 14, 1.17, 0.02);
     }
-
-    @include fonts (500, 12, 1.17, 0.02);
-
-    color: var(--text-color);
 }
+
 .header__link-email{
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
-margin-bottom: 10px;;
-    }
-    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;;
+    }   
 }
-
 
 .icon-envelope {
     fill: currentColor;
     margin-right: 10px;
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 14px;
         height: 10px;
     }
@@ -111,7 +116,7 @@ margin-bottom: 10px;;
 .icon-smartphone {
     fill: currentColor;
     margin-right: 10px;
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 10px;
         height: 14px;
     }
@@ -119,15 +124,16 @@ margin-bottom: 10px;;
 .icon-menu_24px {
     margin-right: 15px;
     position: relative;
-    @media screen and (min-width: 768px) {
-        display: none;}
+    @include tablet {
+        display: none;
+    }
 }
 
 .icon-close_24px {
     position: absolute;
     right: 15px;
-    @media screen and (min-width: 768px) {
-    display: none;
+    @include tablet {
+        display: none;
     }
 }
 

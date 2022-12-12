@@ -1,26 +1,41 @@
 .hero {
-    margin: 0 auto;
-
     display: flex;
     align-items: center;
-    
+    margin: 0 auto;
     height: 400px;
     max-width: 480px;
+
     background-color: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tel.jpg);
+    background-image: var(--gra), url(../../images/hero-tel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: var(--gra), url(../../images/hero-tel-2х.jpg);
+        }
 
-    @media screen and (min-width: 768px) {
-    height: 459px;
-    max-width: 768px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-tab.jpg);
+    @include tablet {
+        height: 459px;
+        max-width: 768px;
+        background-image: var(--gra), url(../../images/hero-tab.jpg);
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: var(--gra), url(../../images/hero-tab-2x.jpg);
+            }
     }
-    @media screen and (min-width: 1200px) {
-    height: 600px;
-    max-width: 1600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero.jpg);
-    }
+
+    @include desktop {
+        height: 600px;
+        max-width: 1600px;
+        background-image: var(--gra), url(../../images/hero.jpg);
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: var(--gra), url(../../images/hero-2x.jpg);
+            }
+    }   
 }
 
 .hero__title {
@@ -34,14 +49,14 @@
         
     color: var(--additional-color);
     
-    @media screen and (min-width: 768px) {
-    @include fonts (900, 26, 1.62, 0.06);
-    width: 360px;
+    @include tablet {
+        @include fonts (900, 26, 1.62, 0.06);
+        width: 360px;
     }
 
-    @media screen and (min-width: 1200px) {
-    @include fonts (900, 44, 1.36, 0.06);
-    width: 696px;
+    @include desktop {
+        @include fonts (900, 44, 1.36, 0.06);
+        width: 696px;
     }
 }
 

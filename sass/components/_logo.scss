@@ -1,17 +1,15 @@
 .header__logo {
     font-family: "Raleway";
     @include fonts (700, 24, 1.17, 0.03);
-    
-        @media screen and (min-width: 1200px) {
-            // text-align: left;
-            @include fonts (700, 26, 1.17, 0.03);
-        }
-
     color: #000000;
-
+    
     transition-property: color, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @include desktop {
+        @include fonts (700, 26, 1.17, 0.03);
+    }
 
     &:hover,
     &:focus {
@@ -26,17 +24,17 @@
 
     font-family: "Raleway";
     @include fonts (700, 24, 1.17, 0.03);
-
-    @media screen and (min-width: 1200px) {
-        text-align: left;
-        @include fonts (700, 26, 1.17, 0.03);
-    }
-
+    
     color: var(--additional-color);
 
     transition-property: color, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @include desktop {
+        text-align: left;
+        @include fonts (700, 26, 1.17, 0.03);
+    }
 
     &:hover,
     &:focus {

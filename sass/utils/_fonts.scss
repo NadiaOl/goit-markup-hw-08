@@ -5,6 +5,25 @@
     line-height: $lh;
     letter-spacing: $ls+em;
     }
+
+    @mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+        }
+    }
+
+    @mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+        }
+    }
+
+    @mixin mobile {
+    @media screen and (min-width: 480px) {
+            @content;
+        }
+    }
+    
     
 body {
     font-family: "Roboto", "Raleway", sans-serif;
