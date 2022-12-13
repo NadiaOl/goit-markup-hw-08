@@ -186,10 +186,15 @@
 }
 
 .menu-close__link-tel {
-    @include fonts (500, 34, 1.17, 0.02);
+
+    @include fonts (500, 26, 1.17, 0.02);
     color: var(--link-color);
+    @media screen and (min-width: 378px) {
+        @include fonts (500, 34, 1.17, 0.02);
+    }
+    }
+        
     
-}
 
 .menu-close__link-email {
     @include fonts (500, 24, 1.17, 0.02);

@@ -687,10 +687,18 @@ textarea::placeholder {
 
 .menu-close__link-tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--link-color);
+}
+@media screen and (min-width: 378px) {
+  .menu-close__link-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 .menu-close__link-email {
