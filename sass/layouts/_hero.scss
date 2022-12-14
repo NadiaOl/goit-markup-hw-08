@@ -29,11 +29,11 @@
     @include desktop {
         height: 600px;
         max-width: 1600px;
-        background-image: var(--gra), url(../../images/hero.jpg);
+        background-image: var(--gra), url(../images/hero.jpg);
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                background-image: var(--gra), url(../../images/hero-2x.jpg);
+                background-image: var(--gra), url(../images/hero-2x.jpg);
             }
     }   
 }

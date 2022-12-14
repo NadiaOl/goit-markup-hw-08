@@ -771,12 +771,12 @@ textarea::placeholder {
   .hero {
     height: 600px;
     max-width: 1600px;
-    background-image: var(--gra), url(../../images/hero.jpg);
+    background-image: var(--gra), url(../images/hero.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--gra), url(../../images/hero-2x.jpg);
+    background-image: var(--gra), url(../images/hero-2x.jpg);
   }
 }
 
