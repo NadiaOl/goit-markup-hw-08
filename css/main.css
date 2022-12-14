@@ -662,7 +662,7 @@ textarea::placeholder {
 }
 
 .menu-close__list {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .menu-close__list-item:not(:last-child) {
