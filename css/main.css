@@ -662,7 +662,7 @@ textarea::placeholder {
 }
 
 .menu-close__list {
-  margin-bottom: 306px;
+  margin-bottom: 50px;
 }
 
 .menu-close__list-item:not(:last-child) {
@@ -746,25 +746,25 @@ textarea::placeholder {
   height: 400px;
   max-width: 480px;
   background-color: #C4C4C4;
-  background-image: var(--gra), url(../../images/hero-tel.jpg);
+  background-image: var(--gra), url(../images/hero-tel.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--gra), url(../../images/hero-tel-2х.jpg);
+    background-image: var(--gra), url(../images/hero-tel-2х.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     height: 459px;
     max-width: 768px;
-    background-image: var(--gra), url(../../images/hero-tab.jpg);
+    background-image: var(--gra), url(../images/hero-tab.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--gra), url(../../images/hero-tab-2x.jpg);
+    background-image: var(--gra), url(../images/hero-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
